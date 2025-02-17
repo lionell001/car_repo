@@ -19,7 +19,8 @@ df_employee = pd.read_sql(query_employee, engine)
 
 df_salaries = pd.read_sql(query_employee_salaries, engine)
 
-df_employee_salary = pd.merge(df_employee, df_salaries, on = 'emp_no', how = 'inner')
+# modified by Kpeng
 
+df_employee_salary = pd.merge(df_employee, df_salaries, on = 'number', how = 'inner')
 
 print(sqlalchemy.__version__)
